@@ -1,9 +1,9 @@
-import { CartRepository } from "core/domain/cart/abstractions/CartRepository"
+import { CartCheckoutRepository } from "../../../domain/cart/abstractions/CartCheckoutRepository"
 import { HttpClient } from "core/shared/api/abstractions/HttpClient"
 import { AxiosHttpClient } from "core/shared/api/entities/AxiosHttpClient"
 import { CartCheckout } from "../../../domain/cart/entities/CartCheckout"
 
-export class ApiCartRepository extends CartRepository {
+export class ApiCartRepository extends CartCheckoutRepository {
 	private httpClient: HttpClient
 
 	constructor() {

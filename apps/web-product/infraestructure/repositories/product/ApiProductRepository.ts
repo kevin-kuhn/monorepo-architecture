@@ -1,10 +1,9 @@
-import { ProductRepository } from "core/domain/product/abstractions/ProductRepository"
-import { Product } from "core/domain/product/entities/Product"
+import { ProductProdutoRepository } from "../../../domain/product/abstractions/ProductProdutoRepository"
 import { HttpClient } from "core/shared/api/abstractions/HttpClient"
 import { AxiosHttpClient } from "core/shared/api/entities/AxiosHttpClient"
 import { ProductProduto } from "../../../domain/product/entities/ProductProduto"
 
-export class ApiProductRepository extends ProductRepository {
+export class ApiProductRepository extends ProductProdutoRepository {
 	private httpClient: HttpClient
 
 	constructor() {

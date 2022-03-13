@@ -9,14 +9,14 @@ const Home: NextPage = () => {
 		const getAllProducts = async () => {
 			const products = await ProductService.getAllProducts()
 			const cart = await CartService.getUserCart()
-			
+
 			console.log(products)
 			console.log(cart)
 		}
 		getAllProducts()
 	}, [])
 
-	return <div>Hello</div>
+	return <div>WEB-PRODUCT</div>
 }
 
 export default Home

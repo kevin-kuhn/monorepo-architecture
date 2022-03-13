@@ -1,18 +1,19 @@
 import type { NextPage } from "next"
-import Head from "next/head"
-import Image from "next/image"
 import { useEffect } from "react"
 
 import { ProductService } from "../infraestructure/services/ProductService"
+import { CartService } from "../infraestructure/services/CartService"
 
 const Home: NextPage = () => {
-
 	useEffect(() => {
-		const getALlProducts = async () => {
+		const getAllProducts = async () => {
 			const products = await ProductService.getAllProducts()
+			const cart = await CartService.getUserCart()
+			
 			console.log(products)
+			console.log(cart)
 		}
-		getALlProducts()
+		getAllProducts()
 	}, [])
 
 	return <div>Hello</div>

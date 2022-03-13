@@ -3,10 +3,6 @@ import { ProductProduto } from "../../../../web-product/domain/product/entities/
 import { ProductRatingProduto } from "../../../../web-product/domain/product/entities/ProductRatingProduto"
 
 export class MockProductRepository extends ProductRepository {
-	constructor() {
-		super()
-	}
-
 	async getAllProducts(): Promise<ProductProduto[]> {
 		const list: ProductProduto[] = []
 

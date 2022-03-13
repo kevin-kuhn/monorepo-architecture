@@ -1,10 +1,10 @@
 import Uid from "./uid"
 
 export class Entity implements Uid {
-  private id: number
+  private entityId: number
 
   constructor() {
-    this.id = this.generateId()
+    this.entityId = this.generateId()
   }
 
   private generateId(): number {
@@ -12,6 +12,6 @@ export class Entity implements Uid {
   }
 
 	getId(): number {
-		return this.id
+		return this.entityId
 	}
 }
